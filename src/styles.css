@@ -3,14 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-size: cover;
+:root {
+  color-scheme: dark;
 }
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  z-index: -1;
-  /* background-color: grey; */
+
+#particlesVideos {
+  opacity: 0.5;
+  width: 100vw;
+  height: 100vh;
 }

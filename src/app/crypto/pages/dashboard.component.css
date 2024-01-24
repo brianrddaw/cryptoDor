@@ -1,0 +1,30 @@
+header {
+  display: grid;
+  color: #fafbfd;
+  background-color: #202123;
+  grid-template-rows: 3.125rem;
+  grid-template-columns: 1fr 6fr 5fr;
+  padding: 0.625rem 0rem;
+  font-family: "DM Sans";
+  font-size: larger;
+}
+
+header #logo {
+  display: flex;
+  justify-content: left;
+  padding-left: 1rem;
+  align-items: center;
+  grid-column: 2 / 3;
+}
+
+header #links_header {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / 4;
+}
+
+header #links_header .columna_vinculos_header {
+  display: inline-block;
+}
