@@ -1,5 +1,7 @@
 header {
   display: grid;
+  position: fixed;
+  width: 100vw;
   color: #fafbfd;
   background-color: #202123;
   grid-template-rows: 3.125rem;
