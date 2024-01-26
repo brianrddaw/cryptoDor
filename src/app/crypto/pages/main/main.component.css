@@ -15,27 +15,9 @@ div {
 section {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 10rem;
   align-items: center;
   scroll-snap-align: start;
-}
-
-.one {
-  background-color: lightblue;
-}
-
-.second {
-  background-color: lightcoral;
-}
-
-.third {
-  background-color: lightgreen;
-}
-
-.fourth {
-  background-color: lightgrey;
-}
-
-.footer {
-  background-color: grey;
+  background-color: #313335;
 }

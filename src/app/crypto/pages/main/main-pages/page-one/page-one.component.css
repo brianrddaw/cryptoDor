@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+* {
+  font-family: "DM Sans";
+}
+
+.container {
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 6.5rem;
+}
+
+h2 {
+  font-size: 5rem;
+  width: 500px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+div span {
+  width: 15%;
+  height: 0.25rem;
+  border: 1px solid white;
+  background-color: white;
+}
+
+p {
+  font-size: 2.5rem;
+}
