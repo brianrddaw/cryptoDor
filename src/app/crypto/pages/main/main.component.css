@@ -12,7 +12,13 @@ div {
   height: 100vh;
 }
 
-section {
+.one,
+.second,
+.third,
+.fourth,
+.footer {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -20,4 +26,8 @@ section {
   scroll-snap-align: start;
   background-color: #313335;
   /* border: 1px solid red; */
+}
+
+.one {
+  flex-direction: column;
 }
