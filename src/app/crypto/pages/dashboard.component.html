@@ -1,14 +1,18 @@
 <header>
-  <div id="logo">&#64;Crypto</div>
+  <a id="logo" routerLink="/main" routerLinkActive="active-link">
+    &#64;Crypto
+  </a>
   <div id="links_header">
     <div class="columna_vinculos_header">
-      <a href="#">Cryptos</a>
+      <a routerLink="/cryptos" routerLinkActive="active-link">Cryptos</a>
+      <!-- <router-outlet></router-outlet> -->
     </div>
     <div class="columna_vinculos_header">
-      <a href="#">NTF'S</a>
+      <a routerLink="/nfts" routerLinkActive="active-link">NTF'S</a>
     </div>
     <div class="columna_vinculos_header">
-      <a href="#">Prices</a>
+      <a routerLink="/prices" routerLinkActive="active-link">Prices</a>
     </div>
   </div>
 </header>
+<!-- <router-outlet></router-outlet> -->

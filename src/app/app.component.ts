@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { DashboardComponent } from './crypto/pages/dashboard.component';
 import { CryptosComponent } from './crypto/pages/cryptos/cryptos.component';
 import { MainComponent } from './crypto/pages/main/main.component';
+import { DashboardComponent } from './crypto/pages/dashboard.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +18,4 @@ import { MainComponent } from './crypto/pages/main/main.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'cryptoDor';
-}
+export class AppComponent {}

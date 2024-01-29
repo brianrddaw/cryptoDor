@@ -6,6 +6,7 @@ import { PageThreeComponent } from './main-pages/page-three/page-three.component
 import { PageFourComponent } from './main-pages/page-four/page-four.component';
 import { FooterComponent } from './main-pages/footer/footer.component';
 import { ArrowMainPageComponent } from '../../components/arrow-main-page/arrow-main-page.component';
+import { DashboardComponent } from '../dashboard.component';
 
 @Component({
   selector: 'app-main',
@@ -18,6 +19,7 @@ import { ArrowMainPageComponent } from '../../components/arrow-main-page/arrow-m
     PageFourComponent,
     FooterComponent,
     ArrowMainPageComponent,
+    DashboardComponent,
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
