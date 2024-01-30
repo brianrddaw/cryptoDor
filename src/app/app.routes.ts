@@ -9,5 +9,5 @@ export const routes: Routes = [
   { path: 'cryptos', component: CryptosComponent },
   { path: 'prices', component: PricesComponent },
   { path: 'nfts', component: NftsComponent },
-  // { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
