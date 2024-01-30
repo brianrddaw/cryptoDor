@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CryptosComponent } from './crypto/pages/cryptos/cryptos.component';
+import { PricesComponent } from './crypto/pages/prices/prices.component';
 import { MainComponent } from './crypto/pages/main/main.component';
 import { DashboardComponent } from './crypto/pages/dashboard.component';
 
@@ -13,6 +14,7 @@ import { DashboardComponent } from './crypto/pages/dashboard.component';
     RouterOutlet,
     DashboardComponent,
     CryptosComponent,
+    PricesComponent,
     MainComponent,
   ],
   templateUrl: './app.component.html',
