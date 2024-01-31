@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+.footer-container {
+  display: flex;
+  align-items: end;
+  /* border: 1px solid yellow; */
+  height: 100vh;
+  width: 99vw;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: calc(66vh - 0.625rem);
+  background-color: #202123;
+}
+
+hr {
+  background-color: #313335;
+  border: 0px solid transparent;
+  height: 55%;
+  width: 0.4rem;
+}
+
+.items-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 70%;
+  height: 80%;
+
+  /* border: 1px solid green; */
+  grid-template-columns: 49.5% 1% 49.5%;
+  grid-template-rows: 80% 20%;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  /* border: 1px solid pink; */
+  grid-column: span 3;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-right: 3.5rem;
+  flex-direction: column;
+  width: 100%;
+  /* border: 1px solid white; */
+  font-size: 2.5rem;
+  gap: 0.5rem;
+}
+
+span {
+  width: 3rem;
+  height: 0.4rem;
+  margin-right: 6rem;
+  background-color: white;
+}
+
+.links-container {
+  display: flex;
+  justify-content: start;
+  /* border: 1px solid red; */
+  padding-left: 3rem;
+  width: 100%;
+  height: 50%;
+}
+
+.links-container div {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 35%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* border: 1px solid palegreen; */
+}
+
+a {
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+}

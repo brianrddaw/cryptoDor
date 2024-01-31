@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+section {
+  display: grid;
+  margin: 0 auto;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: 70%;
+}
+
+.first-subcontainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.first-subcontainer p {
+  font-size: 2.125rem;
+  height: 5rem;
+}
+
+.first-p {
+  margin-bottom: 5rem;
+}
+
+.second-subcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+
+svg {
+  filter: invert(1);
+  width: 25rem;
+  height: 25rem;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+div h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+div span {
+  width: 3rem;
+  height: 0.4rem;
+  background-color: white;
+}

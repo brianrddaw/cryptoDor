@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans";
+}
+
+#prices-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, auto);
+  min-width: 100%;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+#prices-front-background,
+#prices-search-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background-color: #0f1113;
+}
+
+#prices-front-background {
+  flex-direction: column;
+}
+
+/*Estilo frontal*/
+
+#prices-front-background,
+#prices-front-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-row: 1 / 2;
+}
+
+#prices-front-background {
+  height: 100vh;
+  grid-column: 1 / 13;
+}
+
+#prices-front-container {
+  grid-column: 2 / 12;
+  margin-top: 175px;
+}
+
+#prices-front-container-left {
+  grid-column: 1 / 6;
+}
+
+#prices-front-container-left #prices-front-title h1 {
+  font-size: 5em;
+}
+
+#prices-front-white-linea {
+  height: 8px;
+  width: 75px;
+  background-color: #fff;
+}
+
+#prices-front-subtitulo {
+  margin-top: 40px;
+  font-size: 1.8em;
+}
+
+/*Estilo de busqueda*/
+
+#prices-search-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 100px);
+  grid-column: 2 / 12;
+  grid-row: 2 / 3;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  width: 100vw;
+}
+
+#prices-search-container #prices-search-title {
+  grid-row: 1 / 2;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#prices-search-container #prices-search-title h3 {
+  font-size: 1.3em;
+}
+
+#prices-search-container #prices-search-bar {
+  display: flex;
+  justify-content: center;
+  grid-row: 2 / 3;
+}
+
+#prices-search-container #prices-search-bar input {
+  display: block;
+  width: 50%;
+  background-color: #fff;
+  color: #202123;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#prices-search-container #prices-search-button-container {
+  display: flex;
+  justify-content: center;
+  grid-row: 3 / 4;
+}
+
+#prices-search-container #prices-search-button-container input {
+  display: block;
+  cursor: pointer;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #202123;
+}

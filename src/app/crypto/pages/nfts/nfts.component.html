@@ -1,0 +1,27 @@
+<app-dashboard></app-dashboard>
+<div id="nftsMainDiv">
+    <div id="mainSearch">
+        <!-- Div para la página de busqueda -->
+        <h1 id="nftsTitle">NFT's.</h1>
+        <h1 id="nftsLine">_</h1>
+        <p id="nftsDescription">Explore different NFT's and the<br>crypto on which they are based.</p>
+
+        <form (ngSubmit)="onSubmit()">
+            <input id="searchText" type="text" placeholder="Name" name="search" [(ngModel)]="searchTerm">
+            <button id="searchButton" type="submit">Search</button>
+        </form>
+
+    </div>
+
+    <div id="dataShow" *ngIf="nftImageUrl && nftName">
+        <!-- Div para la informacion de el NFT que solo se puede mostrar si hay datos -->
+        <img [src]="nftImageUrl" alt="NFT Image" id="nftImage">
+        <p id="nftName">{{nftName}}</p>
+        <p id="nftAsset">Based On: {{assetPlatformId}}</p>
+        <p id="nftDescription">Description: {{nftDescription}}</p>
+        <p id="nftContract">Contract Address: {{nftContractAddress}}</p>
+        <!-- Botton para volver a la pagina de inicio -->
+        <button id="goBackButton" (click)="goBack()">Go Back</button>
+      </div>
+</div>
+<app-footer></app-footer>
