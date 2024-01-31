@@ -6,7 +6,7 @@ import { PricesComponent } from './crypto/pages/prices/prices.component';
 import { MainComponent } from './crypto/pages/main/main.component';
 import { DashboardComponent } from './crypto/pages/dashboard.component';
 import { NftsComponent } from './crypto/pages/nfts/nfts.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,6 +18,7 @@ import { NftsComponent } from './crypto/pages/nfts/nfts.component';
     PricesComponent,
     MainComponent,
     NftsComponent,
+    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
