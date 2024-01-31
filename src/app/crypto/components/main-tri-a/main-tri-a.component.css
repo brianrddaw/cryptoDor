@@ -39,8 +39,12 @@ a {
   height: 5.3rem;
   border: 0.125rem solid white;
   border-radius: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s ease-in;
 }
 
-a p {
-  font-size: 1.5rem;
+a:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s ease-in;
 }

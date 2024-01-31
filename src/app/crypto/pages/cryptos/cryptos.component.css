@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans";
+  background-color: #313335;
 }
 
 #cryptos_container {
@@ -23,6 +24,7 @@
 #cryptos_front_background {
   height: 100vh;
   grid-column: 1 / 13;
+
   /* INCLUIR AQUÍ LA IMAGEN DE FONDO */
 }
 

@@ -6,7 +6,7 @@
   display: flex;
   align-items: end;
   /* border: 1px solid yellow; */
-  height: 100vh;
+  height: calc(100vh - 4.375rem);
   width: 99vw;
 }
 
@@ -53,7 +53,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: end;
-  padding-right: 3.5rem;
+  padding-right: 4rem;
   flex-direction: column;
   width: 100%;
   /* border: 1px solid white; */

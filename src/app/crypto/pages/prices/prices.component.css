@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans";
+  background-color: #313335;
 }
 
 #prices-front-background,
@@ -13,7 +14,6 @@
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  background-color: #0f1113;
 }
 
 #prices-front-background {
@@ -75,7 +75,7 @@
   margin-bottom: 20px;
 }
 
-#prices-search-container #prices-search-title h3{
+#prices-search-container #prices-search-title h3 {
   font-size: 1.3em;
 }
 

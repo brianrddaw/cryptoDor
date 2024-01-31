@@ -5,7 +5,7 @@
 .arrow-container {
   display: flex;
   position: relative;
-  top: 12rem;
+  top: 10rem;
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
@@ -23,6 +23,7 @@
   border-radius: 50%;
   animation: infinite 3s move;
   cursor: pointer;
+  transition: 0.3s ease-in;
 }
 
 .circle:hover {
