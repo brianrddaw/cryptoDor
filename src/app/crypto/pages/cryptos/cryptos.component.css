@@ -3,13 +3,18 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans";
-  background-color: #313335;
 }
 
 #cryptos_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, auto);
+  min-width: 100%;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: calc(100vh - 4.375rem);
+  background-color: #313335;
 }
 
 /* Front styles */
@@ -24,13 +29,19 @@
 #cryptos_front_background {
   height: 100vh;
   grid-column: 1 / 13;
-
-  /* INCLUIR AQUÍ LA IMAGEN DE FONDO */
+  height: calc(100vh - 4.375rem);
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background-image: url("cryptos_bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
 }
 
 #cryptos_front_container {
   grid-column: 2 / 12;
-  margin-top: 10.938rem;
+  /* margin-top: 10.938rem; */
 }
 
 #cryptos_front_container_left {
@@ -60,9 +71,11 @@
   grid-template-rows: repeat(3, 100px);
   grid-column: 2 / 12;
   grid-row: 2 / 3;
-  align-items: center;
+  height: calc(100vh - 4.375rem);
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  scroll-snap-align: start;
+  padding-top: 9.375rem;
 }
 
 #cryptos_search_container #cryptos_search_title {
@@ -110,10 +123,14 @@
 #cryptos_list_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px auto;
+  grid-template-rows: 100px 28.125rem;
   grid-column: 3 / 11;
   grid-row: 3 / 4;
-  height: 100vh;
+  height: calc(100vh - 4.375rem);
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  padding-top: 3.125rem;
 }
 
 #cryptos_list_container #cryptos_list_title {
@@ -163,4 +180,16 @@
   .cryptos_list_browselist_element_name {
   margin-left: 20px;
   font-size: 1.2em;
+}
+
+/* Footer styles */
+
+#cryptos_footer{
+  grid-column: 1 / 13;
+  grid-row: 4 / 4;
+  height: calc(100vh - 4.375rem);
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* background-color: #313335; */
 }
