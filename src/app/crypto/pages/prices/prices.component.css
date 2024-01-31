@@ -6,14 +6,24 @@
   background-color: #313335;
 }
 
+#prices-container{
+  min-width: 100%;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: calc(100vh - 4.375rem);
+}
+
 #prices-front-background,
-#prices-search-container {
+#prices-search-container,
+#footer {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  height: 100vh;
+  grid-template-rows: repeat(2, 1fr);
+  height: calc(100vh - 4.375rem);
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  background-color: #313335;
 }
 
 #prices-front-background {
@@ -29,7 +39,6 @@
 }
 
 #prices-front-background {
-  height: 100vh;
   grid-column: 1 / 12;
 }
 
@@ -59,6 +68,7 @@
 
 /* Estilo de búsqueda */
 #prices-search-container {
+  padding: 250px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 100px);
@@ -66,7 +76,6 @@
   grid-row: 2 / 3;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 #prices-search-container #prices-search-title {
