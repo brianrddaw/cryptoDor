@@ -1,19 +1,8 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans";
-}
-
-#prices-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, auto);
-  min-width: 100%;
-  width: 100vw;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
 }
 
 #prices-front-background,
@@ -21,7 +10,6 @@
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
@@ -32,18 +20,17 @@
   flex-direction: column;
 }
 
-/*Estilo frontal*/
-
+/* Estilo frontal */
 #prices-front-background,
-#prices-front-container {
+#prices-front-container,
+#footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-row: 1 / 2;
 }
 
 #prices-front-background {
   height: 100vh;
-  grid-column: 1 / 13;
+  grid-column: 1 / 12;
 }
 
 #prices-front-container {
@@ -70,8 +57,7 @@
   font-size: 1.8em;
 }
 
-/*Estilo de busqueda*/
-
+/* Estilo de búsqueda */
 #prices-search-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -80,8 +66,7 @@
   grid-row: 2 / 3;
   align-items: center;
   justify-content: center;
-  height: 75vh;
-  width: 100vw;
+  height: 100vh;
 }
 
 #prices-search-container #prices-search-title {
@@ -90,7 +75,7 @@
   margin-bottom: 20px;
 }
 
-#prices-search-container #prices-search-title h3 {
+#prices-search-container #prices-search-title h3{
   font-size: 1.3em;
 }
 
@@ -122,4 +107,11 @@
   border-radius: 10px;
   background-color: #fff;
   color: #202123;
+}
+
+/* Estilo del pie de página */
+#footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 2 / 12;
 }
