@@ -5,19 +5,37 @@
   display: block;
 }
 
+#container {
+  min-width: 100%;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: calc(100vh - 4.375rem);
+}
 
+#section-one,
+#section-two {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: calc(100vh - 4.375rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
 #nftsMainDiv {
   /* dmsans es la tipografia de la fuente */
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-  min-height: 100vh; 
-  background-color: #313335; 
+  min-height: 100vh;
+  background-color: #313335;
 }
 
-h1, p {
+h1,
+p {
   margin-bottom: 20px;
   text-align: center;
 }
@@ -53,7 +71,9 @@ button {
   transition: background-color 0.3s ease;
 }
 
-#nftsTitle, #nftsDescription, #nftsLine {
+#nftsTitle,
+#nftsDescription,
+#nftsLine {
   position: absolute;
   left: 10%;
 }
@@ -68,7 +88,9 @@ button {
   top: 71%;
 }
 
-#searchText, #searchButton, #goBackButton {
+#searchText,
+#searchButton,
+#goBackButton {
   position: absolute;
   background-color: white;
   font-size: 1rem;
@@ -83,13 +105,13 @@ button {
   border-radius: 10px;
 }
 
-#searchButton, #goBackButton {
+#searchButton,
+#goBackButton {
   width: 7%;
   height: 50px;
   top: 46%;
   left: 64%;
 }
-
 
 #nftsLine {
   font-size: 6rem;
@@ -137,7 +159,9 @@ button {
     padding-top: 50px;
   }
 
-  #nftsTitle, #nftsDescription, #nftsLine {
+  #nftsTitle,
+  #nftsDescription,
+  #nftsLine {
     left: 5%;
   }
 
@@ -155,7 +179,8 @@ button {
     left: 25%;
   }
 
-  #searchButton, #goBackButton {
+  #searchButton,
+  #goBackButton {
     width: 15%;
     left: 42.5%;
   }
@@ -165,11 +190,13 @@ button {
     left: 5%;
   }
 
-  #nftName, #nftAsset {
+  #nftName,
+  #nftAsset {
     left: 20%;
   }
 
-  #nftContract, #nftDescription {
+  #nftContract,
+  #nftDescription {
     left: 5%;
   }
 }
@@ -178,7 +205,9 @@ button {
     padding-top: 50px;
   }
 
-  #nftsTitle, #nftsDescription, #nftsLine {
+  #nftsTitle,
+  #nftsDescription,
+  #nftsLine {
     left: 5%;
   }
 
@@ -196,7 +225,8 @@ button {
     left: 25%;
   }
 
-  #searchButton, #goBackButton {
+  #searchButton,
+  #goBackButton {
     width: 15%;
     left: 42.5%;
   }
@@ -213,17 +243,19 @@ button {
     margin: auto;
   }
 
-  #nftName, #nftAsset, #nftContract, #nftDescription {
+  #nftName,
+  #nftAsset,
+  #nftContract,
+  #nftDescription {
     position: static;
     width: 100%;
     margin: auto;
     padding-left: 10%;
     padding-right: 10%;
-
   }
 }
 .background-nfts {
-  background-image: url('nfts.background.png');
+  background-image: url("nfts.background.png");
   transition: background-image 0.5s ease-out;
 }
 

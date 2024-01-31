@@ -41,42 +41,20 @@
       <h3>Or browse the list.</h3>
     </div>
     <div id="cryptos_list_browselist">
+      @for (elemento of diccionario; track $index) {
       <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
+        <img
+          [src]="elemento.img"
+          [alt]="elemento.name"
+          id="img-{{ $index }}"
+          class="cryptos_list_browselist_element_img"
+        />
+
         <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
+          <p id="p-{{ $index }}">{{ elemento.name }}</p>
         </div>
       </div>
-      <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
-        <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
-        </div>
-      </div>
-      <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
-        <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
-        </div>
-      </div>
-      <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
-        <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
-        </div>
-      </div>
-      <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
-        <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
-        </div>
-      </div>
-      <div class="cryptos_list_browselist_element">
-        <div class="cryptos_list_browselist_element_box"></div>
-        <div class="cryptos_list_browselist_element_name">
-          <p>Name.</p>
-        </div>
-      </div>
+      }
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "DM Sans";
-  background-color: #313335;
+  /* background-color: #313335; */
 }
 
 #cryptos_container {
@@ -142,7 +142,7 @@
   flex-wrap: nowrap;
   align-items: center;
   margin: 15px 30px;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   border-radius: 10px;
 }
 
@@ -163,4 +163,15 @@
   .cryptos_list_browselist_element_name {
   margin-left: 20px;
   font-size: 1.2em;
+}
+
+.cryptos_list_browselist_element {
+  background-color: #202123;
+  border: 0px solid transparent;
+}
+img {
+  height: 70px;
+  width: 70px;
+  margin-left: 1rem;
+  border-radius: 10px;
 }
