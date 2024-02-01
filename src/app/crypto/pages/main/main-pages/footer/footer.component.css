@@ -91,5 +91,9 @@ span {
 a {
   height: 3rem;
   width: 3rem;
-  background-color: white;
+  /* background-color: white; */
+}
+
+svg{
+  filter: invert();
 }
