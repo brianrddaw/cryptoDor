@@ -8,21 +8,22 @@
 
 .container {
   /* border: 1px solid green; */
-  width: 100vw;
+  width: fit-content;
+  padding-left: 10rem;
 }
 
 .h1-container {
   display: flex;
   align-items: end;
-  /* border: 1px solid red; */
   width: fit-content;
   height: fit-content;
+  /* border: 1px solid red; */
 }
 
 h1 {
   font-size: 6rem;
-  /* border: 1px solid yellow; */
   line-height: 0.8;
+  /* border: 1px solid yellow; */
 }
 
 h2 {
@@ -43,4 +44,36 @@ div span {
 
 p {
   font-size: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3rem;
+    width: 300px;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+  .container {
+    display: grid;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .container {
+    padding-right: 0rem;
+  }
 }
