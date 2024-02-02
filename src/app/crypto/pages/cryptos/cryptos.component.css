@@ -39,13 +39,12 @@ div {
   scroll-snap-align: start;
   background-image: url("cryptos_bg.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position-x: right;
 }
 
 #cryptos_front_container {
   grid-column: 2 / 12;
-  /* margin-top: 10.938rem; */
 }
 
 #cryptos_front_container_left {
@@ -148,7 +147,7 @@ div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 125px);
-  grid-column: 2 / 12;
+  grid-column: 1 / 13;
   grid-row: 2 / 3;
   padding: 40px 20px;
   border: 1px solid #fff;
@@ -156,9 +155,7 @@ div {
   height: fit-content;
 }
 
-#cryptos_list_container
-  #cryptos_list_browselist
-  .cryptos_list_browselist_element {
+#cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -167,10 +164,7 @@ div {
   border-radius: 10px;
 }
 
-#cryptos_list_container
-  #cryptos_list_browselist
-  .cryptos_list_browselist_element
-  .cryptos_list_browselist_element_box {
+#cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
   height: 70px;
   width: 70px;
   margin-left: 10px;
@@ -178,10 +172,7 @@ div {
   border-radius: 10px;
 }
 
-#cryptos_list_container
-  #cryptos_list_browselist
-  .cryptos_list_browselist_element
-  .cryptos_list_browselist_element_name {
+#cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
   margin-left: 20px;
   font-size: 1.2em;
 }
@@ -215,4 +206,96 @@ img {
 .cryptos_list_browselist_element:hover {
   scale: 1.1;
   transition: 0.3s ease-in-out;
+}
+
+/* Responsive styles */
+
+@media only screen and (max-width: 1366px) {
+
+  /* Front styles */
+
+  #cryptos_front_background{
+    grid-column: 2 / 13;
+  }
+
+  /* List styles */
+
+  #cryptos_list_container #cryptos_list_title {
+    font-size: 1.2em;
+  }
+
+  #cryptos_list_container #cryptos_list_browselist {
+    grid-template-rows: repeat(3, 115px);
+  }
+
+  #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
+    height: 60px;
+    width: 60px;
+  }
+
+  #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
+    margin-left: 20px;
+    font-size: 1.1em;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* Front styles */
+
+  #cryptos_container #cryptos_front_background #cryptos_front_container #cryptos_front_container_left #cryptos_front_title h1{
+    font-size: 4em;
+  }
+
+  #cryptos_front_white_rect{
+    width: 3.438rem;
+  }
+
+  #cryptos_front_subtitle{
+    margin-top: 1.875rem;
+    font-size: 1.3em;
+  }
+
+  /* Search styles */
+
+  #cryptos_search_container #cryptos_search_title {
+    margin-bottom: 0px;
+  }
+
+  #cryptos_search_container #cryptos_search_title h3 {
+    font-size: 1.2em;
+  }
+
+  #cryptos_search_container #cryptos_search_bar input {
+    width: 70%;
+    padding: 12px;
+  }
+
+  #cryptos_search_container #cryptos_search_button_container input {
+    padding: 12px 50px;
+  }
+
+  /* List styles */
+
+  #cryptos_list_container #cryptos_list_title {
+    font-size: 1.2em;
+  }
+
+  #cryptos_list_container #cryptos_list_browselist {
+    /* grid-column: 3 / 11; */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 105px);
+    padding: 20px 10px;
+  }
+
+  #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
+    height: 55px;
+    width: 55px;
+  }
+
+  #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
+    margin-left: 20px;
+    font-size: 1.1em;
+  }
 }
