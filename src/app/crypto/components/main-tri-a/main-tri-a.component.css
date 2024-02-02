@@ -48,3 +48,34 @@ a:hover {
   color: black;
   transition: 0.3s ease-in;
 }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .tri-a-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .tri-a-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+}
