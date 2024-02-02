@@ -54,22 +54,14 @@ div span {
   background-color: white;
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 800px) {
   section {
-    max-width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 0.8fr);
-
-    gap: 0rem;
   }
 
   div h1 {
     font-size: 2.2rem;
-    padding-left: 3rem;
-  }
-
-  div span {
-    margin-left: 3rem;
   }
 
   .first-subcontainer {
@@ -79,22 +71,36 @@ div span {
 
   .first-subcontainer p {
     font-size: 1.5rem;
-    padding: 0 3rem;
   }
 
-  .first-p {
-    margin-bottom: 3rem;
-    margin-top: 1rem;
-  }
-
-  .second-subcontainer {
-    max-height: fit-content;
-    max-width: fit-content;
-    place-self: center;
-  }
   svg {
     width: 15rem;
     height: 10rem;
-    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .first-subcontainer p {
+    font-size: 1.5rem;
+  }
+
+  svg {
+    width: 17rem;
+    height: 11rem;
+  }
+}
+
+/* Styles specific to screen sizes between 800px and 1510px */
+@media screen and (max-width: 1510px) {
+  div h1 {
+    font-size: 2.8rem;
+  }
+
+  .first-subcontainer {
+    justify-content: center;
+  }
+
+  .first-subcontainer p {
+    font-size: 1.6rem;
   }
 }
