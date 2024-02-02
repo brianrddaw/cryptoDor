@@ -32,6 +32,7 @@
         id="cryptos_search_button"
         name="cryptos_search_button"
         value="Search"
+        (click)="cryptoSearch()"
       />
     </div>
   </div>
@@ -42,12 +43,13 @@
     </div>
     <div id="cryptos_list_browselist">
       @for (elemento of diccionario; track $index) {
-      <div class="cryptos_list_browselist_element">
+      <div class="cryptos_list_browselist_element" (click)="cryptoSearch(elemento.id)">
         <img
           [src]="elemento.img"
           [alt]="elemento.name"
           id="img-{{ $index }}"
           class="cryptos_list_browselist_element_box"
+          title="{{ elemento.name }}"
         />
 
         <div class="cryptos_list_browselist_element_name">
