@@ -5,11 +5,11 @@
 .arrow-container {
   display: flex;
   position: relative;
-  top: 10rem;
+  top: 8rem;
   justify-content: center;
   align-items: center;
   /* border: 1px solid red; */
-  width: 100%;
+  width: 100vw;
 }
 
 .circle {
@@ -47,5 +47,11 @@
   }
   50% {
     transform: translateY(30%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrow-container {
+    top: 5rem;
   }
 }
