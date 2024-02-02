@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-crypto-info',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './crypto-info.component.html',
   styleUrl: './crypto-info.component.css',
 })
-export class CryptoInfoComponent {}
+export class CryptoInfoComponent {
+  @Input() cryptoName: string = '';
+
+}

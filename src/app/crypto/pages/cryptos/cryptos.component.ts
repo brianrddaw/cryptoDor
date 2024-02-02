@@ -8,15 +8,18 @@ import { DashboardComponent } from '../dashboard.component';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../main/main-pages/footer/footer.component';
 import { HttpClient } from '@angular/common/http';
+import { CryptoInfoComponent } from '../../../crypto-info/crypto-info.component';
 
 @Component({
-  selector: 'app-cryptos',
-  standalone: true,
-  imports: [CommonModule, DashboardComponent, RouterOutlet, FooterComponent],
-  templateUrl: './cryptos.component.html',
-  styleUrls: ['./cryptos.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-cryptos',
+    standalone: true,
+    templateUrl: './cryptos.component.html',
+    styleUrls: ['./cryptos.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, DashboardComponent, RouterOutlet, FooterComponent, CryptoInfoComponent]
 })
+
+
 export class CryptosComponent {
   diccionario: any = [];
   cryptoName: string = '';
