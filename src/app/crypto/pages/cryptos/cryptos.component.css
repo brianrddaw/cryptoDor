@@ -142,7 +142,7 @@ div {
 
   /* Mario, este es el display que debes cambiar para para mostrar los datos de la crypto */
 
-  display: none;
+  /* display: none; */
 }
 
 #crypto_info_container #crypto_info_top{
@@ -157,7 +157,10 @@ div {
   height: 150px;
   width: 150px;
   background-color: #FFF;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 
 #crypto_info_container #crypto_info_top #crypto_info_top_text{
   display: grid;
@@ -401,4 +404,20 @@ img {
     margin-left: 20px;
     font-size: 1.1em;
   }
+}
+
+#crypto_info_back {
+}
+
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
 }

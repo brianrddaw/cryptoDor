@@ -21,12 +21,34 @@ import { CryptoInfoComponent } from '../../../crypto-info/crypto-info.component'
 
 
 export class CryptosComponent {
-  diccionario: any = [];
-  cryptoName: string = '';
-  crytoImg: any = '';
-  cryptoDescription: any = '';
-  cryptoId: any = '';
-  cryptoPosition: any = '';
+  diccionario:        any = [];
+  cryptoName:         string = '';
+  crytoImg:           any = '';
+  cryptoDescription:  any = '';
+  cryptoId:           any = '';
+  cryptoPosition:     any = '';
+
+  // Contenedores para la informacion de las cryptos
+
+  cryptoInfoContainer: any;
+
+  cryptoSearchContainer: any;
+
+
+  cryptoNameContainer: any;
+  cryptoImgContainer:  any;
+  cryptoDescriptionContainer: any;
+  cryptoIdContainer: any;
+  cryptoPositionContainer: any;  
+  ngAfterViewInit() {
+    this.cryptoSearchContainer = document.getElementById('cryptos_search_container');
+    this.cryptoInfoContainer = document.getElementById('crypto_info_container');
+    this.cryptoNameContainer = document.getElementById('cryptoNameContainer');
+    this.cryptoImgContainer = document.getElementById('crypto_info_top_image');
+    this.cryptoDescriptionContainer = document.getElementById('cryptoDescriptionContainer');
+    this.cryptoIdContainer = document.getElementById('cryptoIdContainer');
+    this.cryptoPositionContainer = document.getElementById('cryptoPositionContainer');
+  }
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {
     this.getCryptoInfo();
@@ -76,21 +98,43 @@ export class CryptosComponent {
           const { image: { small }, name, symbol, market_cap_rank, description } = data;
           this.cryptoName = name;
           this.crytoImg = small;
-          this.cryptoDescription = description;
+          this.cryptoDescription = description.en;
           this.cryptoId = symbol;
           this.cryptoPosition = market_cap_rank;
+          // console.log(this.cryptoName);
+          // console.log(this.crytoImg);
+          // console.log(this.cryptoDescription.en);
+          // console.log(this.cryptoId);
+          // console.log(this.cryptoPosition);
+          // Mostrar datos en la pagina
+
+          this.cryptoNameContainer.innerHTML = this.cryptoName;
+          this.cryptoImgContainer.style.backgroundImage = `url(${this.crytoImg})`;
+          this.cryptoDescriptionContainer.innerHTML = "Description: " + this.cryptoDescription;
+          this.cryptoIdContainer.innerHTML = "ID: " + this.cryptoId;
+          this.cryptoPositionContainer.innerHTML = "Position Nº:  " + this.cryptoPosition;
+
+          // Mostrar el contenedor de la informacion
+
+          this.cryptoInfoContainer.classList.remove('hidden');
+          this.cryptoInfoContainer.classList.add('visible');
+          
+          this.cryptoSearchContainer.classList.remove('visible');
+          this.cryptoSearchContainer.classList.add('hidden');
           this.cdr.detectChanges();
-          console.log(this.cryptoName);
-          console.log(this.crytoImg);
-          console.log(this.cryptoDescription.en);
-          console.log(this.cryptoId);
-          console.log(this.cryptoPosition);
         }
       )
+
+
     } else {
       console.log('No se ha introducido un nombre de criptomoneda');
     }
   }
 
-
+  goBack() {
+    this.cryptoInfoContainer.classList.remove('visible');
+    this.cryptoInfoContainer.classList.add('hidden');
+    this.cryptoSearchContainer.classList.remove('hidden');
+    this.cryptoSearchContainer.classList.add('visible');
+  }
 }
