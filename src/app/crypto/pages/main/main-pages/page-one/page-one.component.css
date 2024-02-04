@@ -12,6 +12,24 @@
   padding-left: 10rem;
 }
 
+.space-background-container {
+  position: absolute;
+  top: 4.375rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  /* border: 2px solid red; */
+}
+
+.space-background-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .h1-container {
   display: flex;
   align-items: end;

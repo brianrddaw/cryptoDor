@@ -2,9 +2,10 @@ header {
   display: grid;
   position: static;
   width: auto;
+  height: 4.375rem;
   color: #fafbfd;
   background-color: #202123;
-  grid-template-rows: 3.125rem;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr 6fr 5fr;
   padding: 0.625rem 0rem;
   font-family: "DM Sans";
@@ -29,4 +30,23 @@ header #links_header {
 
 header #links_header .columna_vinculos_header {
   display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 0rem;
+  }
+
+  header #links_header {
+    gap: 2rem;
+  }
+
+  header #logo {
+    padding: 0;
+  }
 }
