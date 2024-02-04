@@ -39,7 +39,7 @@ export class CryptosComponent {
   cryptoImgContainer:  any;
   cryptoDescriptionContainer: any;
   cryptoIdContainer: any;
-  cryptoPositionContainer: any;  
+  cryptoPositionContainer: any;
   ngAfterViewInit() {
     this.cryptoSearchContainer = document.getElementById('cryptos_search_container');
     this.cryptoInfoContainer = document.getElementById('crypto_info_container');
@@ -85,13 +85,13 @@ export class CryptosComponent {
       const input = document.getElementById('cryptos_search_input') as HTMLInputElement;
       this.cryptoName = input.value;
     }
-    
+
 
     if(this.cryptoName) {
       console.log(this.cryptoName);
 
       // Obtener datos de la API
-      
+
       this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${this.cryptoName}`).subscribe(
         data => {
           // console.log(data);
@@ -108,17 +108,17 @@ export class CryptosComponent {
           // console.log(this.cryptoPosition);
           // Mostrar datos en la pagina
 
-          this.cryptoNameContainer.innerHTML = this.cryptoName;
+          this.cryptoNameContainer.innerHTML = this.cryptoName + ".";
           this.cryptoImgContainer.style.backgroundImage = `url(${this.crytoImg})`;
-          this.cryptoDescriptionContainer.innerHTML = "Description: " + this.cryptoDescription;
-          this.cryptoIdContainer.innerHTML = "ID: " + this.cryptoId;
-          this.cryptoPositionContainer.innerHTML = "Position Nº:  " + this.cryptoPosition;
+          this.cryptoDescriptionContainer.innerHTML = this.cryptoDescription;
+          this.cryptoIdContainer.innerHTML = this.cryptoId;
+          this.cryptoPositionContainer.innerHTML = "#" + this.cryptoPosition;
 
           // Mostrar el contenedor de la informacion
 
           this.cryptoInfoContainer.classList.remove('hidden');
           this.cryptoInfoContainer.classList.add('visible');
-          
+
           this.cryptoSearchContainer.classList.remove('visible');
           this.cryptoSearchContainer.classList.add('hidden');
           this.cdr.detectChanges();

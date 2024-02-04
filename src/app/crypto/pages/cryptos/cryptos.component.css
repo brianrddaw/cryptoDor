@@ -79,10 +79,6 @@ div {
   align-items: center;
   scroll-snap-align: start;
   padding-top: 9.375rem;
-
-  /* Mario, este es el display que debes cambiar para para mostrar la barra de búsqueda */
-
-  /* display: none; */
 }
 
 #cryptos_search_container #cryptos_search_title {
@@ -139,10 +135,6 @@ div {
   grid-template-rows: 150px auto;
   color: #FFF;
   padding-top: 175px;
-
-  /* Mario, este es el display que debes cambiar para para mostrar los datos de la crypto */
-
-  /* display: none; */
 }
 
 #crypto_info_container #crypto_info_top{
@@ -156,9 +148,10 @@ div {
 #crypto_info_container #crypto_info_top #crypto_info_top_image{
   height: 150px;
   width: 150px;
-  background-color: #FFF;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  border-radius: 10px;
+  margin-top: auto;
 }
 
 
@@ -180,13 +173,24 @@ div {
 #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 
 #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  font-size: 1.1em;
+  font-size: 1.5em;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_button{
+  margin-left: auto;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_button button{
+  padding: 15px 30px;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 10px;
 }
 
 #crypto_info_container #crypto_info_bottom{
@@ -285,13 +289,6 @@ img {
 
 @media only screen and (max-width: 1366px) {
 
-  #cryptos_container{
-    scroll-snap-type: none;
-    overflow-y: scroll;
-  }
-
-  /* Front styles */
-
   /* Search styles */
 
   #cryptos_search_container #cryptos_search_title h3 {
@@ -326,6 +323,15 @@ img {
 
 }
 
+@media only screen and (max-width: 1024px){
+
+  #cryptos_container{
+    scroll-snap-type: none;
+    overflow-y: scroll;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
 
   /* Front styles */
@@ -355,7 +361,6 @@ img {
   #cryptos_search_container {
     align-items: center;
     height: calc(100vh - 4.375rem);
-    /* height: calc(70vh - 4.375rem); */
   }
 
   #cryptos_search_container #cryptos_search_title {
@@ -373,6 +378,50 @@ img {
 
   #cryptos_search_container #cryptos_search_button_container input {
     padding: 12px 50px;
+  }
+
+  /* Info styles */
+
+  #crypto_info_container #crypto_info_top{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_image{
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
+    font-size: 3em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_button{
+    margin: 25px auto;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_button button{
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_bottom{
+    padding-top: 75px;
   }
 
   /* List styles */
@@ -405,10 +454,6 @@ img {
     font-size: 1.1em;
   }
 }
-
-#crypto_info_back {
-}
-
 
 .visible {
   opacity: 1;
