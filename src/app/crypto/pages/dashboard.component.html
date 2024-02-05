@@ -2,7 +2,7 @@
   <a id="logo" #logo routerLink="/main" routerLinkActive="active-link">
     &#64;Crypto
   </a>
-  <div id="links_header">
+  <div id="links_header" #links>
     <div class="columna_vinculos_header">
       <a routerLink="/cryptos" routerLinkActive="active-link">Cryptos</a>
     </div>
@@ -12,5 +12,23 @@
     <div class="columna_vinculos_header">
       <a routerLink="/prices" routerLinkActive="active-link">Prices</a>
     </div>
+  </div>
+  <div id="menu-button" #menuButton (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div id="menu" #menu>
+    <ul id="dropdown">
+      <li>
+        <a routerLink="/cryptos" routerLinkActive="active-link">Cryptos</a>
+      </li>
+      <li>
+        <a routerLink="/nfts" routerLinkActive="active-link">NFT'S</a>
+      </li>
+      <li>
+        <a routerLink="/prices" routerLinkActive="active-link">Prices</a>
+      </li>
+    </ul>
   </div>
 </header>

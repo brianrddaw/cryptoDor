@@ -26,7 +26,9 @@ import { CryptosComponent } from './cryptos/cryptos.component';
   changeDetection: ChangeDetectionStrategy.Default,
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-  @ViewChild('logo') logo!: ElementRef;
+  @ViewChild('menu') menu!: ElementRef;
+  @ViewChild('menuButton') menuButton!: ElementRef;
+  @ViewChild('links') links!: ElementRef;
 
   constructor() {}
 
@@ -34,6 +36,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.updateLogo();
+    this.toggleMenu();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -42,11 +45,21 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
   updateLogo(): void {
     if (window.innerWidth < 768) {
-      console.log('small');
-      this.logo.nativeElement.innerText = '@';
+      this.links.nativeElement.style.display = 'none';
+      this.menuButton.nativeElement.style.display = 'flex';
     } else {
-      console.log('large');
-      this.logo.nativeElement.innerText = '@Crypto';
+      this.menuButton.nativeElement.style.display = 'none';
+      this.menu.nativeElement.style.display = 'none';
+      this.links.nativeElement.style.display = 'flex';
+    }
+  }
+
+  toggleMenu(): void {
+    console.log('hola');
+    if (this.menu.nativeElement.style.display === 'none') {
+      this.menu.nativeElement.style.display = 'flex';
+    } else {
+      this.menu.nativeElement.style.display = 'none';
     }
   }
 }
