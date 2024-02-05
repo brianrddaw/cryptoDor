@@ -20,13 +20,14 @@ import { FooterComponent } from '../main/main-pages/footer/footer.component';
 export class NftsComponent {
   searchTerm: string = '';
   nftImageUrl: string = '';
+  nftImageContainer: any;
   nftName: string = '';
+  nftId: string = '';
   assetPlatformId: string = '';
   mainSearchDiv: any;
   nftContentDiv: any;
   nftContractAddress: any;
   nftDescription: any;
-
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   onSubmit() {
@@ -42,16 +43,18 @@ export class NftsComponent {
       .get<any>(`https://api.coingecko.com/api/v3/nfts/${nftName}`)
       .subscribe(
         (data) => {
-          // console.log(data);
+          console.log(data);
           const {
             image: { small },
             name,
             asset_platform_id,
             contract_address,
             description,
+            id
           } = data;
           this.nftImageUrl = small;
           this.nftName = name;
+          this.nftId = id;
           this.assetPlatformId = asset_platform_id;
           this.nftContractAddress = contract_address;
           this.nftDescription = description;
@@ -64,10 +67,12 @@ export class NftsComponent {
 
   updateView() {
     this.mainSearchDiv = document.getElementById('mainSearch');
-    this.nftContentDiv = document.getElementById('dataShow');
+    this.nftContentDiv = document.getElementById('crypto_info_container');
     if (this.mainSearchDiv && this.nftContentDiv) {
       this.mainSearchDiv.style.opacity = '1';
       this.fadeOut(this.mainSearchDiv, () => {
+        this.nftImageContainer = document.getElementById('crypto_info_top_image');
+        this.nftImageContainer.style.backgroundImage = `url(${this.nftImageUrl})`;
         this.mainSearchDiv.style.display = 'none';
         this.nftContentDiv.style.display = 'block';
         this.nftContentDiv.style.opacity = '0';
@@ -104,7 +109,7 @@ export class NftsComponent {
   }
   goBack() {
     this.mainSearchDiv = document.getElementById('mainSearch');
-    this.nftContentDiv = document.getElementById('dataShow');
+    this.nftContentDiv = document.getElementById('crypto_info_container');
 
     if (this.mainSearchDiv && this.nftContentDiv) {
       this.nftContentDiv.style.opacity = '1';
