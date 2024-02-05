@@ -1,9 +1,9 @@
 <section class="container">
   <div class="space-background-container">
     <video
-      autoplay
       loop
-      muted
+      oncanplay="this.play()"
+      onloadedmetadata="this.muted = true"
       src="../../../../../../assets/space-background.mp4"
     ></video>
   </div>
