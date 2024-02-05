@@ -11,6 +11,9 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: calc(100vh - 4.375rem);
+  background-image: url("nfts_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #section-one,
@@ -254,8 +257,20 @@ button {
     padding-right: 10%;
   }
 }
+
+@media only screen and (max-width: 768px) {
+
+  /* Front styles */
+
+  #container {
+    background-image: none;
+    background-color: #004F51;
+  }
+
+}
+
 .background-nfts {
-  background-image: url("nfts.background.png");
+  /* background-image: url("nfts.background.png"); */
   transition: background-image 0.5s ease-out;
 }
 
