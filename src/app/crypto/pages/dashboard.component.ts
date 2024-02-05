@@ -55,11 +55,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   toggleMenu(): void {
-    console.log('hola');
-    if (this.menu.nativeElement.style.display === 'none') {
-      this.menu.nativeElement.style.display = 'flex';
-    } else {
-      this.menu.nativeElement.style.display = 'none';
-    }
+    this.menu.nativeElement.style.display =
+      this.menu.nativeElement.style.display === 'none' ? 'flex' : 'none';
   }
 }

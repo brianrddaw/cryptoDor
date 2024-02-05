@@ -73,6 +73,10 @@ header #links_header .columna_vinculos_header {
   /* border: 1px solid red; */
 }
 
+#menu ul {
+  display: none;
+}
+
 #dropdown {
   display: flex;
   /* border: 1px solid blue; */
@@ -107,6 +111,10 @@ header #links_header .columna_vinculos_header {
     /* border: 1px solid red; */
     flex-direction: column;
     right: 0;
+  }
+
+  #menu ul {
+    display: flex;
   }
 
   header #links_header {
