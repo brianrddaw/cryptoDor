@@ -2,12 +2,16 @@
   display: block;
 }
 
+* {
+  font-family: "DM Sans";
+}
+
 section {
   display: grid;
   margin: 0 auto;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  max-width: 70%;
+  grid-template-columns: 0.8fr 1fr;
+  max-width: 60%;
   /* border: 1px solid purple; */
 }
 
@@ -18,12 +22,13 @@ section {
 }
 
 .first-subcontainer p {
-  font-size: 2.125rem;
+  font-size: 1.8rem;
   height: 5rem;
 }
 
 .first-p {
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
 
 .second-subcontainer {
@@ -35,8 +40,8 @@ section {
 
 svg {
   filter: invert(1);
-  width: 25rem;
-  height: 25rem;
+  width: 20rem;
+  height: 20rem;
 }
 
 div {
@@ -45,23 +50,25 @@ div {
 }
 
 div h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  letter-spacing: 0.1rem;
+  line-height: normal;
   font-weight: 500;
 }
 div span {
-  width: 3rem;
+  width: 3.5rem;
   height: 0.4rem;
   background-color: white;
 }
 
 @media screen and (max-width: 800px) {
   section {
+    display: grid;
+    margin: 0 auto;
+    gap: 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 0.8fr);
-  }
-
-  div h1 {
-    font-size: 2.2rem;
+    grid-template-rows: 1fr 1fr;
+    max-width: 80%;
   }
 
   .first-subcontainer {
@@ -69,29 +76,49 @@ div span {
     order: 2;
   }
 
+  div h1 {
+    font-size: 2rem;
+  }
+
   .first-subcontainer p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   svg {
     width: 15rem;
-    height: 10rem;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (800px <= width <= 1150px) {
+  section {
+    display: grid;
+    margin: 0 auto;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 80%;
+  }
+
+  .first-subcontainer {
+    justify-content: center;
+    order: 2;
+  }
+
+  div h1 {
+    font-size: 2rem;
+  }
+
   .first-subcontainer p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   svg {
-    width: 17rem;
-    height: 11rem;
+    width: 15rem;
   }
 }
 
 /* Styles specific to screen sizes between 800px and 1510px */
-@media screen and (max-width: 1510px) {
+@media screen and (1150px <= width <= 1800px) {
   div h1 {
     font-size: 2.8rem;
   }

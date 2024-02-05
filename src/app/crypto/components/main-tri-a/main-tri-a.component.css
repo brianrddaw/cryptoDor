@@ -2,13 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "DM Sans";
 }
+
 .container {
   display: grid;
   grid-template-rows: 1fr 1fr;
   place-self: center;
-  /* border: 0.125rem solid red; */
   width: 50rem;
+  /* border: 0.125rem solid red; */
 }
 
 span {
@@ -21,14 +23,15 @@ span {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  line-height: 4.5rem;
 }
 
 .tri-a-container {
   display: flex;
   /* border: 0.125rem solid white; */
   justify-content: space-between;
-  padding: 5rem 0rem;
+  padding: 4rem 0rem;
 }
 
 a {
