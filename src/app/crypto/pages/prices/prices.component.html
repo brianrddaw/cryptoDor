@@ -45,7 +45,56 @@
 
   <!-- Muestra de informacion -->
   
-
+  <div id="prices-info-container">
+    <div id="prices-info-top">
+      <div id="prices-info-top-image"></div>
+      <div id="prices-info-top-text">
+        <div id="prices-info-top-text-title">
+          <h1 id="cryptoName">{{ cryptoName }}</h1>
+        </div>
+        <div id="prices-info-top-text-id">
+          <h3 id="cryptoId">ID: {{ cryptoId }} </h3>
+        </div>
+        <div id="prices-info-top-text-position">
+          <p id="cryptoPosition">#{{ cryptoMarketPosition }}</p>
+        </div>
+      </div>
+    </div>
+    <!--Parte de abajo-->
+    <!--Parte inferior izquierda-->
+    <div id="prices-info-bottom">
+      <div id="prices-info-bottom-current">
+        <div class="titulo-nombre1">
+          <h2>Current price.</h2>
+          <div class="current-fila1">
+            <p id="currentPriceValue">{{cryptoPrice}}€</p>
+          </div>
+        </div>
+        <div class="titulo-nombre2">
+          <h2 id="priceChangeName">Price change 24h.</h2>
+          <div class="current-fila2">
+            <p id="priceChangeValue">Cifra</p>
+          </div>
+        </div>
+      </div>
+      <!--Parte inferior derecha-->
+      <div id="prices-info-bottom-percentage">
+        <h2>Price change percentage.</h2>
+        <div class="percentage">
+          <div class="fila1">
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[0]" (click)="onCheckboxClick($event, 0)"/> % 24h</label></p>
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[1]" (click)="onCheckboxClick($event, 1)" /> % 7d</label></p>
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[2]" (click)="onCheckboxClick($event, 2)" /> % 60d</label></p>
+          </div>
+          <div class="fila2">
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[3]" (click)="onCheckboxClick($event, 3)" /> % 14d</label></p>
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[4]" (click)="onCheckboxClick($event, 4)" /> % 30d</label></p>
+            <p class="col"><label><input type="checkbox" class="radio" [(ngModel)]="checkboxValues[5]" (click)="onCheckboxClick($event, 5)" /> % 1y</label></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
