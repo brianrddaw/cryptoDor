@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, ChangeDetectorRef } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ChangeDetectorRef,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { DashboardComponent } from '../dashboard.component';
@@ -8,12 +12,7 @@ import { FooterComponent } from '../main/main-pages/footer/footer.component';
 @Component({
   selector: 'app-nfts',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    DashboardComponent,
-    FooterComponent,
-  ],
+  imports: [CommonModule, FormsModule, DashboardComponent, FooterComponent],
   templateUrl: './nfts.component.html',
   styleUrl: './nfts.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -28,8 +27,7 @@ export class NftsComponent {
   nftContractAddress: any;
   nftDescription: any;
 
-
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) { }
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   onSubmit() {
     if (this.searchTerm) {
@@ -40,20 +38,28 @@ export class NftsComponent {
   }
 
   getNftInfo(nftName: string) {
-    this.http.get<any>(`https://api.coingecko.com/api/v3/nfts/${nftName}`).subscribe(
-      data => {
-        // console.log(data);
-        const { image: { small }, name, asset_platform_id, contract_address, description } = data;
-        this.nftImageUrl = small;
-        this.nftName = name;
-        this.assetPlatformId = asset_platform_id;
-        this.nftContractAddress = contract_address;
-        this.nftDescription = description;
-        this.cdr.detectChanges();
-        this.updateView();
-      },
-      error => console.error(error)
-    );
+    this.http
+      .get<any>(`https://api.coingecko.com/api/v3/nfts/${nftName}`)
+      .subscribe(
+        (data) => {
+          // console.log(data);
+          const {
+            image: { small },
+            name,
+            asset_platform_id,
+            contract_address,
+            description,
+          } = data;
+          this.nftImageUrl = small;
+          this.nftName = name;
+          this.assetPlatformId = asset_platform_id;
+          this.nftContractAddress = contract_address;
+          this.nftDescription = description;
+          this.cdr.detectChanges();
+          this.updateView();
+        },
+        (error) => console.error(error)
+      );
   }
 
   updateView() {
@@ -75,7 +81,7 @@ export class NftsComponent {
   fadeOut(element: any, callback: () => void) {
     let opacity = 1;
     const timer = setInterval(() => {
-      if (opacity <= 0.1){
+      if (opacity <= 0.1) {
         clearInterval(timer);
         element.style.opacity = '0';
         callback();
@@ -88,7 +94,7 @@ export class NftsComponent {
   fadeIn(element: any) {
     let opacity = 0;
     const timer = setInterval(() => {
-      if (opacity >= 1){
+      if (opacity >= 1) {
         clearInterval(timer);
         element.style.opacity = '1';
       }

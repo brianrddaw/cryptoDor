@@ -29,6 +29,7 @@
         id="prices-search-input"
         name="input-search-prices"
         placeholder="Name"
+        [(ngModel)]="cryptoName"
       />
     </div>
     <div id="prices-search-button-container">
@@ -37,10 +38,17 @@
         id="prices-search-button"
         name="prices-search-button"
         value="Search"
+        (click)="searchCrypto()"
       />
     </div>
   </div>
+
+  <!-- Muestra de informacion -->
   
+
+
+
+
   <!--Pie de página-->
   <div id="footer">
     <app-footer></app-footer>

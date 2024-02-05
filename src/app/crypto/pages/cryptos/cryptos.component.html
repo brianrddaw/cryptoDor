@@ -32,7 +32,36 @@
         id="cryptos_search_button"
         name="cryptos_search_button"
         value="Search"
+        (click)="cryptoSearch()"
       />
+    </div>
+  </div>
+
+  <div id="crypto_info_container" class="hidden">
+    <div id="crypto_info_top">
+      <div id="crypto_info_top_image"></div>
+      <div id="crypto_info_top_text">
+        <div id="crypto_info_top_text_title">
+          <h1 id="cryptoNameContainer">Name.</h1>
+        </div>
+        <div id="crypto_info_top_text_id">
+          <h3 id="cryptoIdContainer">ID</h3>
+        </div>
+        <div id="crypto_info_top_text_position">
+          <p id="cryptoPositionContainer">#Position</p>
+        </div>
+      </div>
+      <div id="crypto_info_top_button">
+        <button id="crypto_info_back" (click)="goBack()">Go Back</button>
+      </div>
+    </div>
+    <div id="crypto_info_bottom">
+      <div id="crypto_info_bottom_description">
+        <p id="cryptoDescriptionContainer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo exercitationem incidunt nulla ullam vero ex officiis quaerat eligendi est. Ullam veniam quod eaque laudantium repellendus fugit ut commodi doloremque itaque.
+        Optio aut ad libero odio ipsam delectus! Quidem velit saepe vitae ea et necessitatibus ex aliquid perferendis beatae. Porro fugit cum iste odit nulla odio laboriosam neque labore tempore fuga!
+        Dicta, eos quam dignissimos veniam impedit tempore omnis delectus exercitationem dolores, qui id enim quos quo culpa dolorum repellendus maiores harum. Et laborum reprehenderit nisi rerum repudiandae est temporibus suscipit?
+        Laboriosam dignissimos maxime incidunt amet hic? Saepe nemo dolore esse. Quisquam quia ut illum corrupti, recusandae doloremque repudiandae error sit autem molestiae, aut ea reiciendis distinctio. Quibusdam repellat sapiente sit?</p>
+      </div>
     </div>
   </div>
 
@@ -42,12 +71,13 @@
     </div>
     <div id="cryptos_list_browselist">
       @for (elemento of diccionario; track $index) {
-      <div class="cryptos_list_browselist_element">
+      <div class="cryptos_list_browselist_element" (click)="cryptoSearch(elemento.id)">
         <img
           [src]="elemento.img"
           [alt]="elemento.name"
           id="img-{{ $index }}"
-          class="cryptos_list_browselist_element_img"
+          class="cryptos_list_browselist_element_box"
+          title="{{ elemento.name }}"
         />
 
         <div class="cryptos_list_browselist_element_name">
@@ -57,6 +87,7 @@
       }
     </div>
   </div>
+  <!-- <app-crypto-info></app-crypto-info> -->
 
   <div id="cryptos_footer">
     <app-footer></app-footer>
