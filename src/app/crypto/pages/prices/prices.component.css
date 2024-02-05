@@ -68,7 +68,6 @@
 
 /* Estilo de búsqueda */
 #prices-search-container {
-  padding: 250px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 100px);
@@ -76,6 +75,7 @@
   grid-row: 2 / 3;
   align-items: center;
   justify-content: center;
+  padding-top: 9.375rem;
 }
 
 #prices-search-container #prices-search-title {
@@ -124,3 +124,44 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column: 2 / 12;
 }
+
+
+
+/*responsive*/
+@media (max-width: 768px) {
+  #prices-front-container {
+    margin-top: 100px;
+  }
+
+  #prices-front-container-left #prices-front-title h1 {
+    font-size: 5em;
+  }
+
+  #prices-front-subtitulo {
+    margin-top: 20px;
+    font-size: 2em;
+  }
+
+  #prices-search-container {
+    align-items: center;
+    height: calc(100vh - 4.375rem);
+  }
+
+  #prices-search-container #prices-search-title {
+    margin-bottom: 0px;
+  }
+
+  #prices-search-container #prices-search-title h3 {
+    font-size: 1.2em;
+  }
+
+  #prices-search-container #prices-search-bar input {
+    width: 70%;
+    padding: 12px;
+  }
+
+  #prices-search-container #prices-search-button-container input {
+    padding: 12px 50px;
+  }
+}
+
