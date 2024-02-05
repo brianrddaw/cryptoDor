@@ -56,13 +56,13 @@ div {
 }
 
 #cryptos_front_white_rect {
-  height: 8px;
-  width: 75px;
+  height: 0.5rem;
+  width: 4.688rem;
   background-color: #fff;
 }
 
 #cryptos_front_subtitle {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   font-size: 1.8em;
 }
 
@@ -71,7 +71,7 @@ div {
 #cryptos_search_container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 100px);
+  grid-template-rows: repeat(3, 6.25rem);
   grid-column: 2 / 12;
   grid-row: 2 / 3;
   height: calc(100vh - 4.375rem);
@@ -84,7 +84,7 @@ div {
 #cryptos_search_container #cryptos_search_title {
   grid-row: 1 / 2;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 #cryptos_search_container #cryptos_search_title h3 {
@@ -102,8 +102,8 @@ div {
   width: 50%;
   background-color: #fff;
   color: #202123;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 0.938rem;
+  border-radius: 0.625rem;
 }
 
 #cryptos_search_container #cryptos_search_button_container {
@@ -115,8 +115,8 @@ div {
 #cryptos_search_container #cryptos_search_button_container input {
   display: block;
   cursor: pointer;
-  padding: 15px 50px;
-  border-radius: 10px;
+  padding: 0.938rem 3.125rem;
+  border-radius: 0.625rem;
   background-color: #fff;
   color: #202123;
 }
@@ -132,9 +132,9 @@ div {
   align-items: center;
   scroll-snap-align: start;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 150px auto;
+  grid-template-rows: 9.375rem auto;
   color: #FFF;
-  padding-top: 175px;
+  padding-top: 10.938rem;
 }
 
 #crypto_info_container #crypto_info_top{
@@ -146,11 +146,11 @@ div {
 }
 
 #crypto_info_container #crypto_info_top #crypto_info_top_image{
-  height: 150px;
-  width: 150px;
+  height: 9.375rem;
+  width: 9.375rem;
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   margin-top: auto;
 }
 
@@ -159,8 +159,8 @@ div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  margin-left: 20px;
-  padding-top: 40px;
+  margin-left: 1.25rem;
+  padding-top: 2.5rem;
 }
 
 #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
@@ -187,10 +187,10 @@ div {
 }
 
 #crypto_info_container #crypto_info_top #crypto_info_top_button button{
-  padding: 15px 30px;
+  padding: 0.938rem 1.875rem;
   background-color: #FFF;
   color: #000;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 #crypto_info_container #crypto_info_bottom{
@@ -199,7 +199,7 @@ div {
   grid-column: 2 / 12;
   grid-row: 2 / 3;
   align-items: start;
-  margin-top: 100px;
+  margin-top: 6.25rem;
 }
 
 /* List styles */
@@ -207,7 +207,7 @@ div {
 #cryptos_list_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px 28.125rem;
+  grid-template-rows: 6.25rem 28.125rem;
   grid-column: 3 / 11;
   grid-row: 3 / 4;
   height: calc(100vh - 4.375rem);
@@ -227,12 +227,12 @@ div {
 #cryptos_list_container #cryptos_list_browselist {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 125px);
+  grid-template-rows: repeat(3, 7.813rem);
   grid-column: 1 / 13;
   grid-row: 2 / 3;
-  padding: 40px 20px;
-  border: 1px solid #fff;
-  border-radius: 10px;
+  padding: 2.5rem 1.25rem;
+  border: 0.063rem solid #fff;
+  border-radius: 0.625rem;
   height: fit-content;
 }
 
@@ -240,9 +240,9 @@ div {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin: 15px 30px;
-  border: 1px solid #fff;
-  border-radius: 10px;
+  margin: 0.938rem 1.875rem;
+  border: 0.063rem solid #fff;
+  border-radius: 0.625rem;
   cursor: pointer;
   color: black;
   background-color: #fff;
@@ -251,15 +251,15 @@ div {
 }
 
 #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
-  height: 70px;
-  width: 70px;
-  margin-left: 10px;
+  height: 4.375rem;
+  width: 4.375rem;
+  margin-left: 0.625rem;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
-  margin-left: 20px;
+  margin-left: 1.25rem;
   font-size: 1.2em;
 }
 
@@ -275,9 +275,9 @@ div {
 }
 
 img {
-  height: 70px;
-  width: 70px;
-  border-radius: 10px;
+  height: 4.375rem;
+  width: 4.375rem;
+  border-radius: 0.625rem;
 }
 
 .cryptos_list_browselist_element:hover {
@@ -307,17 +307,17 @@ img {
   }
 
   #cryptos_list_container #cryptos_list_browselist {
-    grid-template-rows: repeat(3, 115px);
+    grid-template-rows: repeat(3, 7.188rem);
     margin-top: 0px;
   }
 
   #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
-    height: 60px;
-    width: 60px;
+    height: 3.75rem;
+    width: 3.75rem;
   }
 
   #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     font-size: 1.1em;
   }
 
@@ -346,7 +346,7 @@ img {
   }
 
   #cryptos_front_white_rect {
-    height: 5px;
+    height: 0.313rem;
     width: 2.6rem;
     background-color: #fff;
   }
@@ -377,7 +377,7 @@ img {
   }
 
   #cryptos_search_container #cryptos_search_button_container input {
-    padding: 12px 50px;
+    padding: 0.75rem 3.125rem;
   }
 
   /* Info styles */
@@ -390,8 +390,8 @@ img {
   #crypto_info_container #crypto_info_top #crypto_info_top_image{
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-    width: 100px;
+    height: 6.25rem;
+    width: 6.25rem;
   }
 
   #crypto_info_container #crypto_info_top #crypto_info_top_text{
@@ -412,16 +412,16 @@ img {
   }
 
   #crypto_info_container #crypto_info_top #crypto_info_top_button{
-    margin: 25px auto;
+    margin: 1.563rem auto;
   }
 
   #crypto_info_container #crypto_info_top #crypto_info_top_button button{
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     font-size: 1.1em;
   }
 
   #crypto_info_container #crypto_info_bottom{
-    padding-top: 75px;
+    padding-top: 4.688rem;
   }
 
   /* List styles */
@@ -437,20 +437,20 @@ img {
 
   #cryptos_list_container #cryptos_list_browselist {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 100px);
+    grid-template-rows: repeat(6, 6.25rem);
     padding-left: 0px;
     padding-right: 0px;
-    margin-top: 300px;
+    margin-top: 18.75rem;
   }
 
   #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_box {
     margin: 0px;
-    height: 45px;
-    width: 45px;
+    height: 2.813rem;
+    width: 2.813rem;
   }
 
   #cryptos_list_container #cryptos_list_browselist .cryptos_list_browselist_element .cryptos_list_browselist_element_name {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     font-size: 1.1em;
   }
 }
