@@ -15,6 +15,7 @@
 
 #prices-front-background,
 #prices-search-container,
+#prices-info-container,
 #footer {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
