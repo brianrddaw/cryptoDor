@@ -161,13 +161,13 @@ export class PricesComponent {
             this.priceChangeValueContainer.style.color = 'green';
           }
 
+          this.priceInfoContainer.scrollIntoView({ behavior: 'smooth' });
           this.cdr.detectChanges();          
 
 
         }
       )
       
-
 
     } else {
       console.log('No crypto name entered');
