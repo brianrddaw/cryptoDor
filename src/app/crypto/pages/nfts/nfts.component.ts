@@ -66,7 +66,7 @@ export class NftsComponent {
   }
 
   updateView() {
-    this.mainSearchDiv = document.getElementById('mainSearch');
+    this.mainSearchDiv = document.getElementsByClassName('mainSearch')[0];
     this.nftContentDiv = document.getElementById('crypto_info_container');
     if (this.mainSearchDiv && this.nftContentDiv) {
       this.mainSearchDiv.style.opacity = '1';
@@ -79,7 +79,7 @@ export class NftsComponent {
         this.fadeIn(this.nftContentDiv);
       });
     } else {
-      console.error('Elements not found');
+      console.log('Elements not found');
     }
   }
 
@@ -108,7 +108,7 @@ export class NftsComponent {
     }, 10);
   }
   goBack() {
-    this.mainSearchDiv = document.getElementById('mainSearch');
+    this.mainSearchDiv = document.getElementsByClassName('mainSearch')[0];
     this.nftContentDiv = document.getElementById('crypto_info_container');
 
     if (this.mainSearchDiv && this.nftContentDiv) {
