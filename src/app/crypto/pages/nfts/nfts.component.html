@@ -94,11 +94,11 @@
         <h1 id="cryptoNameContainer">{{ nftName }}</h1>
       </div>
       <div id="crypto_info_top_text_id">
-        <h3 id="cryptoIdContainer">ID Moneda: {{ assetPlatformId }}</h3>
+        <h3 id="cryptoIdContainer">{{ nftId }}</h3>
       </div>
       <div id="crypto_info_top_text_position">
-        <p id="cryptoPositionContainer">Id: {{ nftId }}</p>
-        <p id="cryptoPositionContainer">Dirección: {{ nftContractAddress }}</p>
+        <p id="cryptoPositionContainer">{{ assetPlatformId }}</p>
+        <p id="cryptoPositionContainer"></p>
       </div>
     </div>
     <div id="crypto_info_top_button">
@@ -107,7 +107,7 @@
   </div>
   <div id="crypto_info_bottom">
     <div id="crypto_info_bottom_description">
-      <p id="cryptoDescriptionContainer">{{ nftDescription }}</p>
+      <p id="cryptoDescriptionContainer">{{ nftDescription }}<!--Dirección: {{ nftContractAddress }}--></p>
     </div>
   </div>
 </div>
