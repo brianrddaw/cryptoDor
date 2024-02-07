@@ -92,7 +92,7 @@ export class CryptosComponent {
 
       // Obtener datos de la API
 
-      this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${this.cryptoName}`).subscribe(
+      this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${this.cryptoName.toLowerCase()}`).subscribe(
         data => {
           // console.log(data);
           const { image: { small }, name, symbol, market_cap_rank, description } = data;

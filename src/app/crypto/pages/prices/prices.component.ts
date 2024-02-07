@@ -110,7 +110,7 @@ export class PricesComponent {
       // console.log(this.cryptoName);
 
       // Cogemos los datos de la api con https://api.coingecko.com/api/v3/coins/{id}
-      this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${this.cryptoName.toLocaleLowerCase()}`).subscribe(
+      this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${this.cryptoName.toLowerCase()}`).subscribe(
         data => {
           // console.log(data);
           const { image: { small }, name, id, symbol, market_cap_rank, market_data: { current_price, price_change_percentage_24h_in_currency, price_change_percentage_7d_in_currency, price_change_percentage_14d_in_currency, price_change_percentage_30d_in_currency, price_change_percentage_60d_in_currency, price_change_percentage_1y_in_currency } } = data;

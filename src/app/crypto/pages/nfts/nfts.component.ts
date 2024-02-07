@@ -40,7 +40,7 @@ export class NftsComponent {
 
   getNftInfo(nftName: string) {
     this.http
-      .get<any>(`https://api.coingecko.com/api/v3/nfts/${nftName}`)
+      .get<any>(`https://api.coingecko.com/api/v3/nfts/${nftName.toLowerCase()}`)
       .subscribe(
         (data) => {
           console.log(data);
