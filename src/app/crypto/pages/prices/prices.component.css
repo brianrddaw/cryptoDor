@@ -135,20 +135,8 @@
   color: #202123;
 }
 
-/* Estilo del pie de página */
-#footer {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column: 2 / 12;
-}
-/*Estilo de Info*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'DM Sans';
-}
 
+/*Estilo de Info*/
 /*Parte de arriba*/
 #prices-info-container{
   display: hidden;
@@ -221,7 +209,6 @@
   grid-row: 2 / 3;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid blue; */
 }
 
 
@@ -232,16 +219,13 @@
   margin-right: 50px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  /* border: 1px solid yellow; */
 }
 
 #prices-info-container #prices-info-bottom #prices-info-bottom-current h2{
   margin-top: 0;
   font-size: 25px;
-  /* border: 1px solid green; */
 }
 .titulo-nombre1{
-  /* border: 1px solid red; */
   margin-bottom: 40px;
 }
 .current-fila1, .current-fila2{
@@ -263,11 +247,15 @@
   height: 100px;
 }
 
+#currentPriceValue{
+  margin-top: 1.25rem;
+}
 
+#priceChangeValue{
+  margin-top: 1.25rem;
+}
 
 /*Parte inferior derecha*/
-
-
 
 #prices-info-container #prices-info-bottom #prices-info-bottom-percentage{
   grid-column: 2 / 2;
@@ -314,6 +302,13 @@
   color: red;
 }
 
+/* Estilo del pie de página */
+#footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 2 / 12;
+}
+
 
 
 /*responsive*/
@@ -357,5 +352,6 @@
   #prices-search-container #prices-search-button-container input {
     padding: 12px 50px;
   }
+
 }
 
