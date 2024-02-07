@@ -5,425 +5,9 @@
   font-size: 100%;
 }
 
-/* #container {
-  min-width: 100%;
-  width: 100vw;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: calc(100vh - 4.375rem);
-  background-image: url("nfts_bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#section-one,
-#section-two {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  height: calc(100vh - 4.375rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-}
-#nftsMainDiv {
-  font-family: "DM Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-  min-height: 100vh;
+body{
   background-color: #313335;
 }
-
-h1,
-p {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-right: 10px;
-  width: 250px;
-  font-size: 16px;
-  outline: none;
-}
-
-input[type="text"]::placeholder {
-  color: #999;
-}
-
-button {
-  min-width: 100px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#nftsTitle,
-#nftsDescription,
-#nftsLine {
-  position: absolute;
-  left: 10%;
-}
-
-#nftsTitle {
-  font-size: 5rem;
-  top: 55%;
-}
-
-#nftsDescription {
-  font-size: 1.5rem;
-  top: 71%;
-}
-
-#searchText,
-#searchButton,
-#goBackButton {
-  position: absolute;
-  background-color: white;
-  font-size: 1rem;
-  color: rgb(90, 90, 90);
-}
-
-#searchText {
-  width: 25%;
-  height: 60px;
-  top: 35%;
-  left: 55%;
-  border-radius: 10px;
-}
-
-#searchButton,
-#goBackButton {
-  width: 7%;
-  height: 50px;
-  top: 46%;
-  left: 64%;
-}
-
-#nftsLine {
-  font-size: 6rem;
-  top: 54%;
-}
-
-#nftImage {
-  width: 300px;
-  position: absolute;
-  top: 20%;
-  left: 10%;
-}
-
-#nftName {
-  position: absolute;
-  font-size: 3rem;
-  left: 30%;
-  top: 35%;
-}
-
-#nftAsset {
-  position: absolute;
-  font-size: 1.5rem;
-  left: 30%;
-  top: 42%;
-}
-
-#nftContract {
-  position: absolute;
-  font-size: 1rem;
-  left: 10%;
-  top: 60%;
-}
-
-#nftDescription {
-  position: absolute;
-  font-size: 1rem;
-  left: 10%;
-  top: 65%;
-  width: 30%;
-  text-align: justify;
-}
-@media (max-width: 1530px) {
-  #nftsMainDiv {
-    padding-top: 50px;
-  }
-
-  #nftsTitle,
-  #nftsDescription,
-  #nftsLine {
-    left: 5%;
-  }
-
-  #nftsTitle {
-    font-size: 3rem;
-    top: 55%;
-  }
-
-  #nftsDescription {
-    font-size: 1rem;
-  }
-
-  #searchText {
-    width: 50%;
-    left: 25%;
-  }
-
-  #searchButton,
-  #goBackButton {
-    width: 15%;
-    left: 42.5%;
-  }
-
-  #nftImage {
-    width: 200px;
-    left: 5%;
-  }
-
-  #nftName,
-  #nftAsset {
-    left: 20%;
-  }
-
-  #nftContract,
-  #nftDescription {
-    left: 5%;
-  }
-}
-@media (max-width: 1300px) {
-  #nftsMainDiv {
-    padding-top: 50px;
-  }
-
-  #nftsTitle,
-  #nftsDescription,
-  #nftsLine {
-    left: 5%;
-  }
-
-  #nftsTitle {
-    font-size: 3rem;
-    top: 55%;
-  }
-
-  #nftsDescription {
-    font-size: 1rem;
-  }
-
-  #searchText {
-    width: 50%;
-    left: 25%;
-  }
-
-  #searchButton,
-  #goBackButton {
-    width: 15%;
-    left: 42.5%;
-  }
-
-  #nftImage {
-    position: static;
-    width: 200px;
-    margin: auto;
-    margin-top: 100px;
-  }
-  #goBackButton {
-    position: static;
-    width: 20%;
-    margin: auto;
-  }
-
-  #nftName,
-  #nftAsset,
-  #nftContract,
-  #nftDescription {
-    position: static;
-    width: 100%;
-    margin: auto;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-
-  /* Front styles
-
-  #container {
-    background-image: none;
-    background-color: #004F51;
-  }
-
-}
-
-.background-nfts {
-  /* background-image: url("nfts.background.png");
-  transition: background-image 0.5s ease-out;
-}
-
-.background-none {
-  background-image: none;
-  transition: background-image 0.5s ease-out;
-}
-
-
-
-
-/* Info styles
-
-#crypto_info_container{
-  display: grid;
-  grid-column: 2 / 12;
-  grid-row: 2 / 3;
-  height: calc(100vh - 4.375rem);
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 150px auto;
-  color: #FFF;
-  padding-top: 175px;
-}
-
-#crypto_info_container #crypto_info_top{
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: start;
-  grid-column: 2 / 12;
-  grid-row: 1 / 2;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_image{
-  height: 150px;
-  width: 150px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 10px;
-  margin-top: auto;
-}
-
-
-#crypto_info_container #crypto_info_top #crypto_info_top_text{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  margin-left: 20px;
-  padding-top: 40px;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
-  grid-column: 1 / 3;
-  grid-row: 1 / 2;
-  font-size: 3.8em;
-  font-weight: 500;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  font-size: 1.5em;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  font-size: 1.5em;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_button{
-  margin-left: auto;
-}
-
-#crypto_info_container #crypto_info_top #crypto_info_top_button button{
-  padding: 15px 30px;
-  background-color: #FFF;
-  color: #000;
-  border-radius: 10px;
-}
-
-#crypto_info_container #crypto_info_bottom{
-  display: grid;
-  grid-template-rows: 50vh;
-  grid-column: 2 / 12;
-  grid-row: 2 / 3;
-  align-items: start;
-  margin-top: 100px;
-}
-
-
-@media only screen and (max-width: 768px) {
-
-  /* Info styles
-
-  #crypto_info_container #crypto_info_top{
-    flex-wrap: wrap;
-    align-items: center;
-  }
- 
-  #crypto_info_container #crypto_info_top #crypto_info_top_image{
-    margin-left: auto;
-    margin-right: auto;
-    height: 100px;
-    width: 100px;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_text{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
-    font-size: 3em;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
-    font-size: 1.1em;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
-    font-size: 1.1em;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_button{
-    margin: 25px auto;
-  }
-
-  #crypto_info_container #crypto_info_top #crypto_info_top_button button{
-    padding: 10px 20px;
-    font-size: 1.1em;
-  }
-
-  #crypto_info_container #crypto_info_bottom{
-    padding-top: 75px;
-  }
-
-}
-
-.visible {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
-} */
-
-
 
 /* Front styles */
 
@@ -511,6 +95,88 @@ button {
   background-color: #313335;
 }
 
+/* Info styles */
+
+#crypto_info_container{
+  display: grid;
+  grid-column: 2 / 12;
+  grid-row: 2 / 3;
+  height: calc(100vh - 4.375rem);
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 9.375rem auto;
+  color: #FFF;
+  padding-top: 10.938rem;
+  background-color: #313335;
+}
+
+#crypto_info_container #crypto_info_top{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  grid-column: 2 / 12;
+  grid-row: 1 / 2;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_image{
+  height: 9.375rem;
+  width: 9.375rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0.625rem;
+  margin-top: auto;
+}
+
+
+#crypto_info_container #crypto_info_top #crypto_info_top_text{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  margin-left: 1.25rem;
+  padding-top: 2.5rem;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 3.8em;
+  font-weight: 500;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 1.5em;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-size: 1.5em;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_button{
+  margin-left: auto;
+}
+
+#crypto_info_container #crypto_info_top #crypto_info_top_button button{
+  padding: 0.938rem 1.875rem;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 0.625rem;
+}
+
+#crypto_info_container #crypto_info_bottom{
+  display: grid;
+  grid-template-rows: 50vh;
+  grid-column: 2 / 12;
+  grid-row: 2 / 3;
+  align-items: start;
+  margin-top: 6.25rem;
+}
+
 @media only screen and (max-width: 768px) {
 
   #nfts_container{
@@ -552,4 +218,60 @@ button {
     margin-top: 100px;
   }
 
+  /* Info styles */
+
+  #crypto_info_container #crypto_info_top{
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_image{
+    margin-left: auto;
+    margin-right: auto;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_title{
+    font-size: 3em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_id{
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_text #crypto_info_top_text_position{
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_button{
+    margin: 1.563rem auto;
+  }
+
+  #crypto_info_container #crypto_info_top #crypto_info_top_button button{
+    padding: 0.625rem 1.25rem;
+    font-size: 1.1em;
+  }
+
+  #crypto_info_container #crypto_info_bottom{
+    padding-top: 4.688rem;
+  }
+
 }
+
+/* .visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
+} */

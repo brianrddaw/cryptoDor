@@ -74,7 +74,7 @@ export class NftsComponent {
         this.nftImageContainer = document.getElementById('crypto_info_top_image');
         this.nftImageContainer.style.backgroundImage = `url(${this.nftImageUrl})`;
         this.mainSearchDiv.style.display = 'none';
-        this.nftContentDiv.style.display = 'block';
+        this.nftContentDiv.style.display = 'grid';
         this.nftContentDiv.style.opacity = '0';
         this.fadeIn(this.nftContentDiv);
       });
@@ -115,7 +115,7 @@ export class NftsComponent {
       this.nftContentDiv.style.opacity = '1';
       this.fadeOut(this.nftContentDiv, () => {
         this.nftContentDiv.style.display = 'none';
-        this.mainSearchDiv.style.display = 'block';
+        this.mainSearchDiv.style.display = 'grid';
         this.mainSearchDiv.style.opacity = '0';
         this.fadeIn(this.mainSearchDiv);
       });
