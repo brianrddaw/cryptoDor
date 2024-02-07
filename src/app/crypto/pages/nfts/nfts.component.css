@@ -20,6 +20,7 @@ body{
   background-image: url("nfts_bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #313335;
 }
 
 #nfts_front{
@@ -170,11 +171,22 @@ body{
 
 #crypto_info_container #crypto_info_bottom{
   display: grid;
-  grid-template-rows: 50vh;
+  grid-template-rows: 40vh;
   grid-column: 2 / 12;
   grid-row: 2 / 3;
   align-items: start;
-  margin-top: 6.25rem;
+  overflow-y: hidden;
+  /* margin-top: 6.25rem; */
+}
+
+#crypto_info_bottom_description{
+  grid-row: 1 / 2;
+  height: 100%;
+  width: 100%;
+}
+
+p{
+  overflow-y: hidden;
 }
 
 @media only screen and (max-width: 768px) {
@@ -259,7 +271,7 @@ body{
   }
 
   #crypto_info_container #crypto_info_bottom{
-    padding-top: 4.688rem;
+    margin-top: 4.688rem;
   }
 
 }
