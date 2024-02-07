@@ -30,6 +30,9 @@ export class NftsComponent {
   nftDescription: any;
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
+
+
+  
   onSubmit() {
     if (this.searchTerm) {
       this.getNftInfo(this.searchTerm);
