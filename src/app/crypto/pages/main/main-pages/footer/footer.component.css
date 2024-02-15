@@ -5,7 +5,6 @@
 .footer-container {
   display: flex;
   align-items: end;
-  /* border: 1px solid yellow; */
   height: calc(100vh - 4.375rem);
   width: 100vw;
 }
@@ -14,7 +13,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: end;
-  /* border: 1px solid red; */
   width: 100%;
   height: calc(66vh - 0.625rem);
   background-color: #202123;
@@ -33,7 +31,6 @@ hr {
   align-items: center;
   width: 70%;
   height: 80%;
-  /* border: 1px solid green; */
   grid-template-columns: 49.5% 1% 49.5%;
   grid-template-rows: 80% 20%;
 }
@@ -43,7 +40,6 @@ hr {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  /* border: 1px solid pink; */
   grid-column: span 3;
   width: 100%;
 }
@@ -55,7 +51,6 @@ hr {
   padding-right: 4rem;
   flex-direction: column;
   width: 100%;
-  /* border: 1px solid white; */
   font-size: 2.5rem;
   gap: 0.5rem;
 }
@@ -70,7 +65,6 @@ span {
 .links-container {
   display: flex;
   justify-content: start;
-  /* border: 1px solid red; */
   padding-left: 3rem;
   width: 100%;
   height: 50%;
@@ -89,7 +83,6 @@ span {
 a {
   height: 3rem;
   width: 3rem;
-  /* background-color: white; */
 }
 
 svg {
@@ -109,7 +102,6 @@ svg {
   .links-container div {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
-    /* border: 1px solid palegreen; */
     width: 100%;
     gap: 1rem;
   }
