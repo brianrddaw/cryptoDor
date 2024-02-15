@@ -45,15 +45,15 @@
 
   <!-- Muestra de informacion -->
 
-  <div id="prices-info-container">
+  <div id="prices-info-container" *ngIf="cryptoName">
     <div id="prices-info-top">
       <div id="prices-info-top-image"></div>
       <div id="prices-info-top-text">
         <div id="prices-info-top-text-title">
-          <h1 id="cryptoName">Name.{{ cryptoName }}</h1>
+          <h1 id="cryptoName">{{ cryptoName }}</h1>
         </div>
         <div id="prices-info-top-text-id">
-          <h3 id="cryptoId">ID: {{ cryptoId }} </h3>
+          <h3 id="cryptoId">{{ cryptoId }} </h3>
         </div>
         <div id="prices-info-top-text-position">
           <p id="cryptoPosition">#{{ cryptoMarketPosition }}</p>
@@ -74,7 +74,7 @@
         <div class="titulo-nombre2">
           <h2 id="priceChangeName">Price change 24h.</h2>
           <div class="current-fila2">
-            <p id="priceChangeValue">Cifra</p>
+            <p id="priceChangeValue"></p>
           </div>
         </div>
       </div>
