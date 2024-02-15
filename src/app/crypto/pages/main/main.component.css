@@ -37,3 +37,9 @@ div {
   justify-content: baseline;
   align-items: baseline;
 }
+
+@media screen and (max-width: 1024px) {
+  div {
+    scroll-snap-type: none;
+  }
+}
