@@ -67,29 +67,34 @@ header #links_header .columna_vinculos_header {
   display: none;
   position: absolute;
   top: 4.375rem;
-  right: 0rem;
+  right: 0;
   max-height: 100%;
   width: fit-content;
+
   /* border: 1px solid red; */
 }
 
 #menu ul {
   display: none;
+  height: 100vh;
+  /* border: 1px solid red; */
 }
 
 #dropdown {
-  display: flex;
-  /* border: 1px solid blue; */
-  width: fit-content;
+  display: grid;
+  grid-template-rows: 10% 10% 10% 70%;
+  flex-direction: column;
+  width: 15.625rem;
   height: fit-content;
   list-style: none;
   text-align: center;
   background-color: #202123;
+  /* border: 1px solid blue; */
 }
 
 #dropdown li {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   padding: 1.5rem;
 }
 
@@ -113,8 +118,14 @@ header #links_header .columna_vinculos_header {
     right: 0;
   }
 
+  #menu {
+    display: flex;
+    /* border: 1px solid blue; */
+  }
+
   #menu ul {
     display: flex;
+    /* border: 1px solid red; */
   }
 
   header #links_header {

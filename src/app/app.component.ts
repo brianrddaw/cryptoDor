@@ -7,6 +7,7 @@ import { MainComponent } from './crypto/pages/main/main.component';
 import { DashboardComponent } from './crypto/pages/dashboard.component';
 import { NftsComponent } from './crypto/pages/nfts/nfts.component';
 import { HttpClientModule } from '@angular/common/http';
+
 @Component({
   selector: 'app-root',
   standalone: true,
