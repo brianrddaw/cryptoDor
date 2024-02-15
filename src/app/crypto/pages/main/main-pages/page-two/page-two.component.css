@@ -12,13 +12,11 @@ section {
   gap: 1rem;
   grid-template-columns: 0.8fr 1fr;
   max-width: 60%;
-  /* border: 1px solid purple; */
 }
 
 .first-subcontainer {
   display: flex;
   gap: 1rem;
-  /* border: 1px solid blue; */
 }
 
 .first-subcontainer p {
@@ -35,7 +33,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid green; */
 }
 
 svg {

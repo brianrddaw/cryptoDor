@@ -5,11 +5,13 @@
   font-family: "DM Sans";
 }
 
-#prices-container{
+#prices-container {
   min-width: 100%;
   width: 100vw;
+  max-width: 100vw;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: calc(100vh - 4.375rem);
 }
 
@@ -135,39 +137,32 @@
   color: #202123;
 }
 
-
 /*Estilo de Info*/
 /*Parte de arriba*/
-#prices-info-container{
+#prices-info-container {
   display: hidden;
   height: 100vh;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 150px auto;
-  color: #FFF;
+  color: #fff;
   padding-top: 175px;
 }
 
-
-
-
-
-
-
-#prices-info-container{
+#prices-info-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 30vh 70vh;
   align-items: baseline;
 }
 
-#prices-info-top{
+#prices-info-top {
   display: flex;
   flex-wrap: wrap;
   grid-column: 2 / 12;
   grid-row: 1 / 3;
 }
 
-#prices-info-top-image{
+#prices-info-top-image {
   height: 9.375rem;
   width: 9.375rem;
   background-repeat: no-repeat;
@@ -175,28 +170,27 @@
   background-size: contain;
 }
 
-#prices-info-top-text{
+#prices-info-top-text {
   height: 9.375rem;
   margin-left: 20px;
 }
 
-#prices-info-top-text-title{
+#prices-info-top-text-title {
   display: flex;
   margin-top: 40px;
   font-size: 3.8em;
 }
 
-#prices-info-top-text-id, #prices-info-top-text-position{
+#prices-info-top-text-id,
+#prices-info-top-text-position {
   display: inline-block;
 }
 
-#prices-info-top-text-position{
+#prices-info-top-text-position {
   margin-left: 50px;
 }
 
-
-
-#prices-info-bottom{
+#prices-info-bottom {
   display: grid;
   grid-template-columns: 9.375rem repeat(11, 1fr);
   grid-template-rows: 1fr;
@@ -204,7 +198,7 @@
   grid-row: 2 / 3;
 }
 
-#prices-info-bottom-current{
+#prices-info-bottom-current {
   grid-column: 1 / 3;
   grid-row: 1 / 2;
 }
@@ -213,89 +207,96 @@
   background-color: #FFF;
   color: #202123;
 }
-
-#prices-info-bottom-percentage{
+#prices-info-bottom-percentage {
   grid-column: 3 / 13;
   grid-row: 1 / 2;
   margin-left: 30px;
 }
 
-.titulo-nombre1, .titulo-nombre2, #prices-info-bottom-percentage{
+.titulo-nombre1,
+.titulo-nombre2,
+#prices-info-bottom-percentage {
   font-size: 1.2em;
 }
 
-.titulo-nombre1 h2, .titulo-nombre2 h2{
+.titulo-nombre1 h2,
+.titulo-nombre2 h2 {
   margin-bottom: 10px;
 }
 
-.titulo-nombre2 h2{
+.titulo-nombre2 h2 {
   margin-top: 20px;
 }
 
-.current-fila1 p, .current-fila2 p{
+.current-fila1 p,
+.current-fila2 p {
   text-align: center;
   padding: 10px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 10px;
 }
 
-.percentage{
+.percentage {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 10px;
   height: 161.2px;
 }
 
-.fila1, .fila2{
+.fila1,
+.fila2 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
 }
 
-.fila1{
+.fila1 {
   grid-row: 1 / 2;
 }
 
-.fila2{
+.fila2 {
   grid-row: 2 / 3;
 }
 
-#prices-info-bottom-percentage h2{
+#prices-info-bottom-percentage h2 {
   margin-bottom: 10px;
 }
 
-.col{
+.col {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   border-radius: 10px;
 }
 
-.col input{
+.col input {
   height: 20px;
   width: 20px;
 }
 
-#fila_col_1, #fila_col_4{
+#fila_col_1,
+#fila_col_4 {
   grid-column: 1 / 5;
 }
 
-#fila_col_2, #fila_col_5{
+#fila_col_2,
+#fila_col_5 {
   grid-column: 5 / 9;
 }
 
-#fila_col_3, #fila_col_6{
+#fila_col_3,
+#fila_col_6 {
   grid-column: 9 / 13;
 }
 
-.positive{
+.positive {
   color: green;
 }
-.negative{
+.negative {
   color: red;
 }
 
@@ -306,8 +307,6 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column: 2 / 12;
 }
-
-
 
 /*responsive*/
 
@@ -323,9 +322,9 @@
     margin-top: 100px;
   }
 
-  #prices-front-background{
+  #prices-front-background {
     background-image: none;
-    background-color: #004F51;
+    background-color: #004f51;
   }
 
   #prices-front-container-left #prices-front-title h1 {

@@ -7,7 +7,6 @@
 }
 
 .container {
-  /* border: 1px solid green; */
   width: fit-content;
   padding-left: 10rem;
 }
@@ -21,7 +20,6 @@
   width: 100%;
   z-index: -1;
   opacity: 0.8;
-  /* border: 2px solid red; */
 }
 
 .space-background-container video {
@@ -35,13 +33,11 @@
   align-items: end;
   width: fit-content;
   height: fit-content;
-  /* border: 1px solid red; */
 }
 
 h1 {
   font-size: 5rem;
   line-height: 0.8;
-  /* border: 1px solid yellow; */
 }
 
 h2 {
